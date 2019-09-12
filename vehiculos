@@ -1,0 +1,124 @@
+using System;
+
+namespace Carros
+{
+   public class program
+    {
+        static void Main(string[] args)
+        {
+            int numero;
+            Vehiuculos v1 = new Vehiuculos();
+            v1.Id = 1;
+            v1.Nombre = "toyota";
+            v1.Modelo = "tercel";
+            v1.Yearht = 1999;
+            Vehiuculos v2 = new Vehiuculos();
+            v2.Id = 2;
+            v2.Nombre = "nissan";
+            v2.Modelo = "versa";
+            v2.Yearht = 2010;
+            Vehiuculos v3 = new Vehiuculos();
+            v3.Id = 3;
+            v3.Nombre = "nissan";
+            v3.Modelo = "sentra";
+            v3.Yearht = 2008;
+
+            Repovehiculo lista = new Repovehiculo();
+            lista.listar_vehiculo(v1);
+            Console.WriteLine("--------------------------------------------");
+            Repovehiculo lista2 = new Repovehiculo();
+            lista2.listar_vehiculo(v2);
+            Console.WriteLine("--------------------------------------------");
+            Repovehiculo lista3 = new Repovehiculo();
+            lista3.listar_vehiculo(v3);
+            Console.WriteLine("______________________________________________");
+            Console.WriteLine("ingrese un numero del 1 al 3");
+            numero = int.Parse(Console.ReadLine());
+
+            switch (numero)
+            {
+                case 1:
+                    Repovehiculo mostrar = new Repovehiculo();
+                    mostrar.mostrar_vehiculo(v1);
+                    break;
+                case 2:
+                    Repovehiculo mostrar2 = new Repovehiculo();
+                    mostrar2.mostrar_vehiculo(v2);
+                    break;
+                case 3:
+                    Repovehiculo mostrar3 = new Repovehiculo();
+                    mostrar3.mostrar_vehiculo(v3);
+                    break;
+
+                default:
+                    Console.WriteLine("opcion no validad");
+                    break;
+            }
+                
+
+            Console.ReadKey();
+
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Carros
+{
+    public class Vehiuculos
+    {
+        private int id;
+        private string nombre;
+        private string modelo;
+        private int yearht;
+
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public string Modelo
+        {
+            get { return modelo; }
+            set { modelo = value; }
+        }
+
+        public int Yearht
+        {
+            get { return yearht; }
+            set { yearht = value; }
+        }
+
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Carros
+{
+   public class Repovehiculo
+   {
+       public void listar_vehiculo(Vehiuculos ve)
+        {
+            Console.WriteLine("El ID es: " + ve.Id+ " El nombre es: " +ve.Nombre+ " Modelo "+ve.Modelo+" "+ " año "+ve.Yearht);
+        }
+
+        public void mostrar_vehiculo(Vehiuculos vx)
+        {
+            Console.WriteLine("el carro seleccionado es: "+ " Id " +vx.Id+ " Nombre " +vx.Nombre+ " Modelo "+vx.Modelo+ " año "+vx.Yearht);
+        }
+
+       
+   }
+}
