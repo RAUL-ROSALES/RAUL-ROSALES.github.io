@@ -1,46 +1,96 @@
 using System;
 
-namespace FRUTAS
+namespace clase_de_frutas
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
-            fruta frutax1 = new fruta();
-            frutax1.Id = 1235;
-            frutax1.Nombre = "manzana roja";
-            frutax1.Tipo = "nose";
-            frutax1.Peso = 12.60;
-            frutax1.Presio = 58.60m;
+            Frutas f1 = new Frutas();
+            f1.Id = 1;
+            f1.Nombre = "manzana roja";
+            f1.Tipo = "nose";
+            f1.Peso = 8.90;
+            f1.Presio = 19.90m;
 
-            fruta frutax2 = new fruta();
-            frutax2.Id = 1235;
-            frutax2.Nombre = "pera";
-            frutax2.Tipo = "nose";
-            frutax2.Peso = 17.90;
-            frutax2.Presio = 45.90m;
+            Frutas f2 = new Frutas();
+            f2.Id = 2;
+            f2.Nombre = "melon chino";
+            f2.Tipo = "nose";
+            f2.Peso = 200.00;
+            f2.Presio = 5.90m;
 
-            fruta frutax3 = new fruta();
-            frutax3.Id = 1235;
-            frutax3.Nombre = "manzana roja";
-						using System;
+            Frutas f3 = new Frutas();
+            f3.Id = 3;
+            f3.Nombre = "platano";
+            f3.Tipo = "nose";
+            f3.Peso = 5.80;
+            f3.Presio = 22.90m;
+
+            RepoFrutas mostrar = new RepoFrutas();
+            mostrar.Mostrar_frutas(f1);
+
+            RepoFrutas mostrar2 = new RepoFrutas();
+            mostrar2.Mostrar_frutas(f2);
+
+            RepoFrutas mostrar3 = new RepoFrutas();
+            mostrar3.Mostrar_frutas(f3);
+            Console.WriteLine("_______________________");
+            decimal total;
+            decimal piezas;
+            int opcion;
+            Console.WriteLine("eliga una opcion de fruta");
+            opcion = int.Parse(Console.ReadLine());
+            Console.Clear();
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("usted a elegido la fruta: " + f1.Nombre);
+
+                    Console.WriteLine("cuantos kilogramos desea llevar");
+                    piezas = decimal.Parse(Console.ReadLine());
+                    total = piezas * f1.Presio;
+                    Console.WriteLine("total a pagar : $ "+total);
+                    break;
+                case 2:
+                    Console.WriteLine("usted a elegido la fruta: " + f2.Nombre);
+
+                    Console.WriteLine("cuantos kilogramos desea llevar");
+                    piezas = decimal.Parse(Console.ReadLine());
+                    total = piezas * f2.Presio;
+                    Console.WriteLine("total a pagar : $ " + total);
+                    break;
+                case 3:
+                    Console.WriteLine("usted a elegido la fruta: " + f3.Nombre);
+
+                    Console.WriteLine("cuantos kilogramos desea llevar");
+                    piezas = decimal.Parse(Console.ReadLine());
+                    total = piezas * f3.Presio;
+                    Console.WriteLine("total a pagar : $ " + total);
+                    break;
+                default:
+                    Console.WriteLine("opcion no validad");
+                    break;
+            }
+                    Console.ReadKey();
+        }
+    }
+}
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FRUTAS
+namespace clase_de_frutas
 {
-   public class fruta
+   public class Frutas
     {
         private int id;
         private string nombre;
         private string tipo;
         private double peso;
-        private decimal precio;
-        //2.1-declaracion de clases,atributos,metodos y encapsulamiento
-        //2.2-instanciacion de una clase
-        //2.3-referencia al objeto actual 
+        private decimal presio;
 
-        //para invocar el objeto privado 
         public int Id
         {
             get { return id;}
@@ -49,36 +99,39 @@ namespace FRUTAS
         public string Nombre
         {
             get { return nombre; }
-            set { nombre = value;}
+            set { nombre = value; }
         }
         public string Tipo
         {
-            get { return tipo;}
-            set { tipo = value;}
+            get { return tipo; }
+            set { tipo = value; }
         }
         public double Peso
         {
-            get { return peso;}
-            set { peso = value;}
+            get { return peso; }
+            set { peso = value; }
         }
         public decimal Presio
         {
-            get { return precio;}
-            set { precio = value;}
+            get { return presio; }
+            set { presio = value; }
         }
 
-        public void Mostrar_fruta(fruta frutax)
-        {
-            Console.WriteLine(frutax.Id + " " + frutax.Nombre + " " + frutax.Peso + " " + frutax.Presio + " " + frutax.Tipo);
-        }
     }
 }
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-            frutax3.Tipo = "nose";
-            frutax3.Peso = 12.60;
-            frutax3.Presio = 58.60m;
-            Console.WriteLine();
-            Console.ReadKey();
+namespace clase_de_frutas
+{
+    public class RepoFrutas
+    {
+        public void Mostrar_frutas(Frutas fx)
+        {
+            Console.WriteLine("ID " + fx.Id + " Nombre: " + fx.Nombre + " Peso aproximado por pieza  " + fx.Peso + " Presio $ " + fx.Presio + " Tipo  " + fx.Tipo);
         }
-    }
+
+        
+   }
 }
