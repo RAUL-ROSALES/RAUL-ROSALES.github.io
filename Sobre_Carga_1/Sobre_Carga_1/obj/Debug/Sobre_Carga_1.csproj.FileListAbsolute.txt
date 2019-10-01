@@ -1,0 +1,7 @@
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\bin\Debug\Sobre_Carga_1.exe.config
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\bin\Debug\Sobre_Carga_1.exe
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\bin\Debug\Sobre_Carga_1.pdb
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\obj\Debug\Sobre_Carga_1.csprojAssemblyReference.cache
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\obj\Debug\Sobre_Carga_1.csproj.CoreCompileInputs.cache
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\obj\Debug\Sobre_Carga_1.exe
+C:\Users\raul__000\source\repos\Sobre_Carga_1\Sobre_Carga_1\obj\Debug\Sobre_Carga_1.pdb
